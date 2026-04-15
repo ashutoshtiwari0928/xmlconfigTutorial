@@ -1,0 +1,20 @@
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="alien1" class="com.xmlconfig.Alien" scope="singleton" autowire="byName">
+<!--        <constructor-arg value="21"/>-->
+<!--        <constructor-arg ref = "laptop1"/>-->
+<!--        <property name="age" value="21"></property>-->
+<!--        <property name="computer" ref="computer1"/>-->
+        <property name="computer2">
+            <bean class="com.xmlconfig.Desktop"/>
+        </property>
+    </bean>
+    <bean id="computer" class="com.xmlconfig.Laptop" scope="prototype"/>
+    <bean id="computer1" class="com.xmlconfig.Desktop" scope="prototype"/>
+
+
+</beans>

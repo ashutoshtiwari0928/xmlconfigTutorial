@@ -1,4 +1,4 @@
-package com.linkedin.learning;
+package com.xmlconfig;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
